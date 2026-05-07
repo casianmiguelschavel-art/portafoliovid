@@ -28,7 +28,7 @@ body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;f
 
 /* CURSOR */
 #cur{position:fixed;width:8px;height:8px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s}
-#cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(14,14,14,0.22);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .35s,height .35s,border-color .25s}
+#cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(14,14,14,0.22);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .35s,height .35s}
 body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-bubble:hover) #cur-ring,body:has(.spec-card:hover) #cur-ring{width:54px;height:54px;border-color:var(--red)}
 
 /* HERO */
@@ -53,7 +53,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
 .hs-value{font-family:'Syne',sans-serif;font-weight:700;font-size:36px;line-height:1;color:var(--cream);letter-spacing:-1px}
 .hs-accent{color:var(--red)}
 .hs-sub{font-size:11px;font-weight:300;color:rgba(255,255,255,.16);margin-top:4px}
-.hero-bottom{background:var(--surface);color:rgba(242,237,228,.18);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.28em;padding:13px var(--pad);display:flex;align-items:center;gap:18px;border-top:var(--rule-w);overflow:hidden;white-space:nowrap;text-transform:uppercase}
+.hero-bottom{background:var(--surface);color:rgba(242,237,228,.18);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.28em;padding:13px var(--pad);display:flex;align-items:center;gap:18px;border-top:var(--rule-w);overflow:hidden}
 .hb-sep{color:var(--red);opacity:.5}
 
 /* SEC HEADER */
@@ -67,7 +67,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
 .videos-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:1px;margin:0 var(--pad);background:rgba(14,14,14,.1);border:var(--rule);border-radius:2px;overflow:hidden}
 .video-card{background:var(--cream);overflow:hidden;transition:background .2s;position:relative}
 .video-card:hover{background:#EBE6DC}
-.card-ribbon{background:transparent;color:var(--muted);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;padding:12px 18px;border-bottom:var(--rule);display:flex;justify-content:space-between;align-items:center;text-transform:uppercase}
+.card-ribbon{background:transparent;color:var(--muted);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.18em;padding:12px 18px;border-bottom:var(--rule);display:flex;justify-content:space-between;align-items:center}
 .ribbon-badge{background:var(--red);color:var(--cream);font-size:8px;padding:2px 8px;border-radius:1px;letter-spacing:.12em}
 .thumb-zone{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-bottom:var(--rule)}
 .thumb-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--cream2);color:rgba(14,14,14,.15)}
@@ -76,18 +76,20 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
 .thumb-ph small{font-size:10px;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
 .thumb-zone img{width:100%;height:100%;object-fit:cover;display:block}
 .thumb-zone:has(img) .thumb-ph{display:none}
-.views-badge{position:absolute;bottom:12px;right:12px;background:var(--ink);color:var(--cream);border-radius:2px;padding:4px 10px;font-family:'DM Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.05em}
-.card-body{padding:20px 18px 24px}
+.views-badge{position:absolute;bottom:12px;right:12px;background:var(--ink);color:var(--cream);border-radius:2px;padding:4px 10px;font-family:'DM Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.08em}
+.card-body{padding:20px 18px 24px;display:flex;flex-direction:column}
 .card-category{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;color:var(--red);margin-bottom:8px;text-transform:uppercase}
 .card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.3px;color:var(--ink);line-height:1.2;margin-bottom:10px}
 .featured .card-title{font-size:22px}
-.card-desc{font-size:13px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:18px}
+.card-desc{font-size:13px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:18px;flex:1}
 .ret-wrap{background:rgba(14,14,14,.07);border-radius:2px;overflow:hidden;margin-bottom:7px;height:3px}
 .ret-bar-inner{height:100%;transition:width 1.4s cubic-bezier(.16,1,.3,1);background:var(--ink)}
 .featured .ret-bar-inner{background:var(--red)}
 .ret-meta{display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--muted)}
 .ret-meta .ret-pct{color:var(--ink);font-size:12px;font-weight:500}
-.ret-note{font-size:10px;color:var(--warm);font-weight:400;margin-top:4px}
+.ret-note{font-size:10px;color:var(--warm);font-weight:400;margin-top:4px;margin-bottom:14px}
+.card-cta{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--cream);padding:8px 14px;border-radius:1px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-decoration:none;text-transform:uppercase;transition:background .2s;width:fit-content;margin-top:auto}
+.card-cta:hover{background:var(--red)}
 
 /* ANALYTICS */
 .sec-analytics{background:var(--surface);border-bottom:var(--rule-w);padding:80px 0 88px;position:relative;overflow:hidden}
@@ -141,7 +143,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
 .spec-body{font-size:13px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:20px}
 .s2 .spec-body{color:rgba(242,237,228,.38)}
 .spec-tags{display:flex;flex-wrap:wrap;gap:6px}
-.spec-tags span{background:rgba(14,14,14,.06);color:var(--muted);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;padding:4px 10px;border-radius:1px;text-transform:uppercase;border:var(--rule)}
+.spec-tags span{background:rgba(14,14,14,.06);color:var(--muted);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;padding:4px 10px;border-radius:1px;text-transform:uppercase;border:1px solid transparent}
 .s2 .spec-tags span{background:rgba(242,237,228,.06);color:rgba(242,237,228,.3);border-color:rgba(242,237,228,.1)}
 
 /* TIMELINE */
@@ -164,6 +166,22 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
 .tl-content h4{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;letter-spacing:-.2px;color:var(--cream);margin-bottom:8px}
 .tl-content p{font-size:13px;font-weight:300;color:rgba(242,237,228,.33);line-height:1.75}
 
+/* CONTACT SECTION */
+.sec-contact{background:var(--cream);border-bottom:var(--rule);padding:120px var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.contact-left h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(36px,5vw,52px);line-height:1.05;color:var(--ink);margin-bottom:20px;letter-spacing:-.5px}
+.contact-left p{font-size:15px;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:32px}
+.contact-cta{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--cream);padding:18px 32px;border-radius:2px;font-family:'Syne',sans-serif;font-weight:700;font-size:16px;letter-spacing:-.3px;text-decoration:none;transition:all .3s cubic-bezier(.16,1,.3,1);border:2px solid var(--ink);}
+.contact-cta:hover{background:var(--cream);color:var(--ink)}
+.contact-icon{font-size:20px}
+.contact-right{background:var(--surface);border:var(--rule-w);border-radius:2px;padding:48px 40px;display:flex;flex-direction:column;gap:24px}
+.contact-info{display:flex;gap:16px;align-items:flex-start}
+.contact-info-icon{font-size:24px;opacity:.6}
+.contact-info-content h3{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;letter-spacing:-.2px;color:var(--cream);margin-bottom:4px}
+.contact-info-content p{font-size:13px;color:rgba(242,237,228,.5);line-height:1.6}
+.contact-info-content a{color:var(--red);text-decoration:none;transition:opacity .2s}
+.contact-info-content a:hover{opacity:.8}
+.contact-divider{height:1px;background:var(--rule-w)}
+
 /* FOOTER */
 .pf-footer{background:var(--surface);border-top:var(--rule-w);padding:72px var(--pad) 80px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end}
 .footer-quote{position:relative}
@@ -183,7 +201,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
 .sec-shorts .sec-line{background:rgba(242,237,228,.08)}
 .shorts-intro{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 var(--pad);margin-bottom:40px}
 .shorts-intro-text{font-size:14px;font-weight:300;color:rgba(242,237,228,.33);line-height:1.8;max-width:540px}
-.shorts-pill{display:flex;align-items:center;gap:8px;border:var(--rule-w);border-radius:2px;padding:8px 16px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;color:rgba(242,237,228,.28);white-space:nowrap;flex-shrink:0;text-transform:uppercase}
+.shorts-pill{display:flex;align-items:center;gap:8px;border:var(--rule-w);border-radius:2px;padding:8px 16px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;color:rgba(242,237,228,.2);text-transform:uppercase}
 .shorts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:0 var(--pad);background:rgba(242,237,228,.06);border:var(--rule-w);border-radius:2px;overflow:hidden;position:relative;z-index:1}
 .short-card{background:var(--surface);overflow:hidden;transition:background .2s;position:relative;display:flex;flex-direction:column}
 .short-card:hover{background:#131108}
@@ -191,13 +209,13 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
 .short-badge-promo{background:rgba(242,237,228,.12);color:rgba(242,237,228,.6)}
 .short-player-wrap{position:relative;width:100%;aspect-ratio:9/16;background:#000;border-bottom:var(--rule-w);overflow:hidden}
 .short-video{width:100%;height:100%;object-fit:cover;display:block}
-.short-no-file{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.1);text-align:center;padding:16px;pointer-events:none;text-transform:uppercase}
+.short-no-file{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.1);text-align:center;padding:20px}
 .short-video:not([src=""]) ~ .short-no-file{display:none}
 .short-info{padding:20px 18px 24px;flex:1;display:flex;flex-direction:column;gap:6px}
 .short-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;color:var(--red);text-transform:uppercase}
 .short-title{font-family:'Syne',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.2px;color:var(--cream);line-height:1.15}
 .short-desc{font-size:12px;font-weight:300;color:rgba(242,237,228,.28);line-height:1.7;margin-top:2px}
-.short-format-note{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:rgba(242,237,228,.16);margin-top:auto;padding-top:12px;border-top:var(--rule-w);text-transform:uppercase}
+.short-format-note{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:rgba(242,237,228,.16);margin-top:auto;padding-top:12px;border-top:var(--rule-w)}
 .sfn-dot{width:5px;height:5px;background:var(--red);border-radius:50%;flex-shrink:0;animation:blink 2s infinite}
 
 /* REVEAL */
@@ -222,6 +240,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
   .footer-right{text-align:left}
   .timeline::before{left:calc(var(--pad) + 70px)}
   .tl-row{grid-template-columns:70px 40px 1fr}
+  .sec-contact{grid-template-columns:1fr;gap:48px;padding:80px var(--pad)}
 }
 
 /* MOBILE */
@@ -237,6 +256,8 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
   .timeline::before{left:calc(24px + 60px)}
   .tl-row{grid-template-columns:60px 36px 1fr;padding-bottom:24px}
   .pf-footer{padding:48px 24px 56px}
+  .sec-contact{padding:60px 24px}
+  .contact-right{padding:32px 24px}
 }
 </style>
 </head>
@@ -259,7 +280,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
         <div class="hero-handle">@C_NCO</div>
       </div>
       <div class="hero-desc">
-        LLevo 6 años creando contenido de forma pasiva en YouTube. Mi canal ha crecido orgánicamente hasta alcanzar casi 5K suscriptores y más de 1.3M de visualizaciones, gracias a una producción constante y una comunidad comprometida.
+        LLevo 6 años creando contenido de forma pasiva en YouTube. Mi canal ha crecido orgánicamente hasta alcanzar casi 5K suscriptores y más de 1.3M de visualizaciones, gracias a una producción constante y estrategias de engagement probadas.
       </div>
     </div>
     <div class="hero-right">
@@ -307,13 +328,6 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
   </div>
   <div class="videos-grid">
 
-    <!-- ╔══════════════════════════════════════════════╗
-         ║  MINIATURA 1 — Para añadir tu imagen:       ║
-         ║  Borra el div.thumb-ph y escribe:           ║
-         ║  <img src="spiderman.jpg"                   ║
-         ║    style="width:100%;height:100%;           ║
-         ║    object-fit:cover;display:block;">        ║
-         ╚══════════════════════════════════════════════╝ -->
     <article class="video-card featured reveal">
       <div class="card-ribbon">
         <span>GAME DEV · ROBLOX</span>
@@ -331,19 +345,17 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
       <div class="card-body">
         <div class="card-category">ROBLOX · GAME DEV</div>
         <h3 class="card-title">Creando Spider-Man en Roblox en 24 Horas</h3>
-        <p class="card-desc">El vídeo más visto del canal. Capitaliza la tendencia de franquicias populares con desarrollo funcional en tiempo real. Demuestra habilidad técnica y estrategia de contenido a la vez.</p>
+        <p class="card-desc">El vídeo más visto del canal. Capitaliza la tendencia de franquicias populares con desarrollo funcional en tiempo real. Demuestra habilidad técnica y estrategia de contenido de alto impacto.</p>
         <div class="ret-wrap"><div class="ret-bar-inner" style="width:78%"></div></div>
         <div class="ret-meta">
           <span>Retención de audiencia</span>
           <span class="ret-pct">78%</span>
         </div>
         <div class="ret-note">Mayor índice de retención del canal — audiencia altamente comprometida</div>
+        <a href="https://youtube.com/@C_NCO" target="_blank" class="card-cta">VER EN YOUTUBE →</a>
       </div>
     </article>
 
-    <!-- ╔══════════════════════════════════════════════╗
-         ║  MINIATURA 2 — <img src="superman.jpg" ...> ║
-         ╚══════════════════════════════════════════════╝ -->
     <article class="video-card reveal">
       <div class="card-ribbon">GAME DEV · ROBLOX</div>
       <div class="thumb-zone">
@@ -365,12 +377,10 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
           <span class="ret-pct">62%</span>
         </div>
         <div class="ret-note">Alta fidelidad — formato con capacidad de escala probada</div>
+        <a href="https://youtube.com/@C_NCO" target="_blank" class="card-cta">VER EN YOUTUBE →</a>
       </div>
     </article>
 
-    <!-- ╔══════════════════════════════════════════════╗
-         ║  MINIATURA 3 — <img src="batman.jpg" ...>   ║
-         ╚══════════════════════════════════════════════╝ -->
     <article class="video-card reveal">
       <div class="card-ribbon">GAME DEV · ROBLOX</div>
       <div class="thumb-zone">
@@ -392,6 +402,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
           <span class="ret-pct">55%</span>
         </div>
         <div class="ret-note">Consolidación — base de audiencia fidelizada al formato</div>
+        <a href="https://youtube.com/@C_NCO" target="_blank" class="card-cta">VER EN YOUTUBE →</a>
       </div>
     </article>
 
@@ -463,7 +474,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
     <div class="insight-box reveal">
       <div class="ib-icon">!</div>
       <p class="ib-text">
-        He creado videos como <strong>«Creando Juegos en 24 Horas»</strong> que concentran los índices de retención más altos del canal. Este formato tuvo un <strong>78% de retención media</strong>, lo que indica un alto nivel de compromiso y satisfacción de la audiencia, convirtiéndose en uno de los pilares del canal.
+        He creado videos como <strong>«Creando Juegos en 24 Horas»</strong> que concentran los índices de retención más altos del canal. Este formato tuvo un <strong>78% de retención media</strong>, confirmando viabilidad comercial y demanda de audiencia.
       </p>
     </div>
 
@@ -483,7 +494,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
       <div class="spec-corner">I</div>
       <div class="spec-num-label">ÁREA 01</div>
       <h3 class="spec-title">CREACIÓN DE CONTENIDO RÁPIDA</h3>
-      <p class="spec-body">Desarrollo de contenido rápido y eficiente para plataformas de video en línea. Enfoque en la creación de materiales atractivos y relevantes que capten la atención del público objetivo.</p>
+      <p class="spec-body">Desarrollo de contenido rápido y eficiente para plataformas de video en línea. Enfoque en la creación de materiales atractivos y relevantes que capten la atención del público.</p>
       <div class="spec-tags">
         <span>Roblox</span><span>Game Dev</span><span>Prototipado</span>
       </div>
@@ -538,7 +549,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
       <div class="short-info">
         <div class="short-tag">ANÁLISIS · VIDEOJUEGOS</div>
         <h3 class="short-title">Análisis de videojuego</h3>
-        <p class="short-desc">Formato entretenido y directo que demuestra la capacidad de síntesis del canal. Opinión estructurada en menos de un minuto con la personalidad característica de CINCO.</p>
+        <p class="short-desc">Formato entretenido y directo que demuestra la capacidad de síntesis del canal. Opinión estructurada en menos de un minuto con personalidad característica.</p>
         <div class="short-format-note"><span class="sfn-dot"></span>Formato de opinión rápida · Estilo propio</div>
       </div>
     </div>
@@ -570,7 +581,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
       <div class="short-info">
         <div class="short-tag">PROMOCIONAL · ESTRATEGIA</div>
         <h3 class="short-title">Promocional de vídeo largo</h3>
-        <p class="short-desc">Short diseñado para dirigir tráfico hacia un vídeo largo del canal. Demuestra comprensión del ecosistema de YouTube y uso estratégico del formato corto como embudo de audiencia.</p>
+        <p class="short-desc">Short diseñado para dirigir tráfico hacia un vídeo largo del canal. Demuestra comprensión del ecosistema de YouTube y uso estratégico del formato corto.</p>
         <div class="short-format-note"><span class="sfn-dot" style="background:var(--warm)"></span>Uso estratégico del formato · Embudo de tráfico</div>
       </div>
     </div>
@@ -611,7 +622,7 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
       <div class="tl-content">
         <div class="tl-phase">EXPLOSIÓN</div>
         <h4>Serie «24 Horas» — 117K views</h4>
-        <p>Lanzamiento y consolidación del formato más exitoso. Spider-Man alcanza 117.000 visualizaciones con un 78% de retención, el hito de mayor impacto de la trayectoria y punto de inflexión del canal.</p>
+        <p>Lanzamiento y consolidación del formato más exitoso. Spider-Man alcanza 117.000 visualizaciones con un 78% de retención, el hito de mayor impacto de la trayectoria.</p>
       </div>
     </div>
     <div class="tl-row reveal">
@@ -620,7 +631,45 @@ body:has(a:hover) #cur-ring,body:has(.video-card:hover) #cur-ring,body:has(.kpi-
       <div class="tl-content">
         <div class="tl-phase">EVOLUCIÓN</div>
         <h4>Rediseño estratégico del canal</h4>
-        <p>Fase de optimización con feedback activo de la comunidad. Comunicación transparente mediante la pestaña de Comunidad. Consolidación de 900+ vídeos y 1.39M de visualizaciones totales acumuladas.</p>
+        <p>Fase de optimización con feedback activo de la comunidad. Comunicación transparente mediante la pestaña de Comunidad. Consolidación de 900+ vídeos y 1.39M de visualizaciones totales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACTO -->
+<section class="sec-contact reveal">
+  <div class="contact-left">
+    <h2>¿Interesado en colaborar?</h2>
+    <p>Estoy disponible para proyectos de contenido, desarrollo de juegos, análisis especializado y estrategia digital. Contáctame para discutir tu visión y cómo puedo ayudarte a alcanzarla.</p>
+    <a href="mailto:casian.miguel@gmail.com" class="contact-cta">
+      <span class="contact-icon">✉</span>
+      ENVIAR CORREO
+    </a>
+  </div>
+  <div class="contact-right">
+    <div class="contact-info">
+      <div class="contact-info-icon">📧</div>
+      <div class="contact-info-content">
+        <h3>Email</h3>
+        <p><a href="mailto:casian.miguel@gmail.com">casian.miguel@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="contact-divider"></div>
+    <div class="contact-info">
+      <div class="contact-info-icon">📱</div>
+      <div class="contact-info-content">
+        <h3>Redes Sociales</h3>
+        <p><a href="https://youtube.com/@C_NCO" target="_blank">YouTube @C_NCO</a></p>
+      </div>
+    </div>
+    <div class="contact-divider"></div>
+    <div class="contact-info">
+      <div class="contact-info-icon">💼</div>
+      <div class="contact-info-content">
+        <h3>Disponibilidad</h3>
+        <p>Respondo en 24-48 horas laborales</p>
       </div>
     </div>
   </div>
